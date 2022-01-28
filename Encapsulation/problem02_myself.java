@@ -3,7 +3,7 @@ public class Rental {
     private int daysRented;
 
     public int getFrequentRenterPoints() {
-        if (movie.getPriceCode() == Movie.NEW_RELEASE && daysRented > 1)
+        if (movie.isPriceCodeValid(daysRented))
             return 2;
         else
             return 1;
@@ -21,5 +21,8 @@ public class Movie {
         return priceCode;
     }
 
+    public boolean isPriceCodeValid(int daysRented) {
+        return priceCode == NEW_RELEASE && daysRented > 1;
+    }
     ...
 }

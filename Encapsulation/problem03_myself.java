@@ -12,3 +12,5 @@ public class Timer {
     public long startTime;
     public long stopTime;
 }
+
+// 어떻게 캡슐화 해야할지 감이 안온다...
